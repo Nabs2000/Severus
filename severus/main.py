@@ -172,9 +172,9 @@ def main():
         logger.error("Error: Control bam also inputted as target bam")
         return 1
         
-    if not (args.vntr_file.endswith('.bed') or args.vntr_file.endswith('.bed.gz')):
-        logger.error("Error: VNTR annotation file should be in bed or bed.gz format")
-        return 1
+    # if not (args.vntr_file.endswith('.bed') or args.vntr_file.endswith('.bed.gz')):
+    #     logger.error("Error: VNTR annotation file should be in bed or bed.gz format")
+    #     return 1
         
     if args.bp_min_support == 0:
         args.bp_min_support = 3
