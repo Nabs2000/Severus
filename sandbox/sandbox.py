@@ -17,6 +17,7 @@ def print_read_details(read):
     print("Is Read Secondary Alignment:", read.is_secondary)
     print("-" * 50)  # Separator for readability
 
+
 def main():
     # Open the BAM file
     BAM_FP = ''
@@ -28,3 +29,5 @@ def main():
             print_read_details(read)
 
 
+if __name__ == "__main__":
+    main()
