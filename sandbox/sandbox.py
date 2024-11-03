@@ -16,3 +16,15 @@ def print_read_details(read):
     print("Is Read Reverse Complemented:", read.is_reverse)
     print("Is Read Secondary Alignment:", read.is_secondary)
     print("-" * 50)  # Separator for readability
+
+def main():
+    # Open the BAM file
+    BAM_FP = ''
+    with pysam.AlignmentFile(BAM_FP, "rb") as bamfile:
+        # Iterate over the first 2 reads in the BAM file
+        for i, read in enumerate(bamfile.fetch()):
+            if i == 2:
+                break
+            print_read_details(read)
+
+
